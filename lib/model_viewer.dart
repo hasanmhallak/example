@@ -51,23 +51,38 @@ class _ModelViewerState extends State<ModelViewer> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          FloatingActionButton(onPressed: () {
-            _controller.runJavaScript('switchSrc("Chair")');
-          }),
-          FloatingActionButton(onPressed: () {
-            _controller.runJavaScript('switchSrc("Canoe")');
-          }),
-          FloatingActionButton(onPressed: () {
-            _controller.runJavaScript('switchSrc("GeoPlanter")');
-          }),
-          FloatingActionButton(onPressed: () {
-            _controller.runJavaScript('switchSrc("Mixer")');
-          }),
-          FloatingActionButton(onPressed: () {
-            _controller.runJavaScript('switchSrc("ToyTrain")');
-          }),
+          FloatingActionButton(
+            child: const Icon(Icons.sync),
+            onPressed: () {
+              _controller.runJavaScript('switchSrc("Chair")');
+            },
+          ),
+          FloatingActionButton(
+            child: const Icon(Icons.sync),
+            onPressed: () {
+              _controller.runJavaScript('switchSrc("Canoe")');
+            },
+          ),
+          FloatingActionButton(
+            child: const Icon(Icons.sync),
+            onPressed: () {
+              _controller.runJavaScript('switchSrc("GeoPlanter")');
+            },
+          ),
+          FloatingActionButton(
+            child: const Icon(Icons.sync),
+            onPressed: () {
+              _controller.runJavaScript('switchSrc("Mixer")');
+            },
+          ),
+          FloatingActionButton(
+            child: const Icon(Icons.sync),
+            onPressed: () {
+              _controller.runJavaScript('switchSrc("ToyTrain")');
+            },
+          ),
         ],
       ),
       body: WebViewWidget(
